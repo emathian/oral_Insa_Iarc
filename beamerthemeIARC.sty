@@ -1,0 +1,119 @@
+\ProvidesPackage{beamerthemeIARC}[15/06/2017 v1.0 beamer 'IARC' theme]
+      \newcommand\@mytitle{}
+\mode<presentation>
+\usefonttheme{professionalfonts} % using non standard fonts for beamer
+\usefonttheme{serif}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usefonttheme{default}
+\usecolortheme{IARC}
+\useinnertheme{circles}
+\useoutertheme[footline=authorinstitutetitle,subsection=false]{miniframes}
+\setbeamercolor{footline}{fg=IARCdblue,bg=darkgray}
+
+\setbeamertemplate{headline}{
+\leavevmode%    ***quitter le mode vertical, important !***
+%\begin{beamercolorbox}[wd=1\paperwidth,ht=5mm,dp=8ex,center]{title in head/foot}
+%  \usebeamerfont{author in head/foot} 
+  %\insertsectionnavigationhorizontal{\paperwidth}{}{}
+%\end{beamercolorbox}
+\hbox{
+\pgfsetfillopacity{0}\begin{beamercolorbox}[wd=0.96\paperwidth,ht=8mm,dp=6ex,left]{title}
+%\vskip8ex
+  \usebeamerfont{section}\usebeamercolor[fg]{section}\par
+
+ \hskip15pt \pgfsetfillopacity{1} {\large   \insertsection}
+  
+
+\end{beamercolorbox}
+
+
+
+
+}
+}
+
+\setbeamersize{text margin left=8pt,text margin right=8pt}
+
+\defbeamertemplate*{title page}{customized}[1][]
+{
+  \vskip9mm
+  \usebeamerfont{title}\usebeamercolor[fg]{title}\center\inserttitle\par
+  \usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par
+  \vskip18mm
+  \usebeamerfont{author}\usebeamercolor[fg]{author}\normalsize\center\insertauthor\par
+ \usebeamerfont{institute}\usebeamercolor[fg]{institute}\small\insertinstitute\par
+ \usebeamerfont{date}\usebeamercolor[fg]{date}\insertdate\par
+  \usebeamercolor[fg]{titlegraphic}\inserttitlegraphic
+
+}
+
+\usebackgroundtemplate{\includegraphics[width=\paperwidth,height=\paperheight]{IARCtemplateBack_other.jpg}}
+
+
+\setbeamertemplate{footnote}{
+        \vspace*{-10.7cm}%
+        \raisebox{1.7cm}{\insertfootnotemark}
+        \parbox[b][2cm]{7.5cm}{
+            \insertfootnotetext%
+        }%
+    }
+
+\setbeamertemplate{footline}{
+\leavevmode%    ***quitter le mode vertical, important !***
+%\begin{beamercolorbox}[wd=.92\paperwidth,ht=5mm,dp=8ex]{author in head/foot}
+%  \usebeamerfont{author in head/foot}
+%  \includegraphics[height=12mm]{IARC-Logo.png} %{\tiny \insertshortauthor}
+%\end{beamercolorbox}
+%\begin{beamercolorbox}[wd=.30\paperwidth,ht=5mm,dp=8ex,center]{title in head/foot}
+%  \usebeamerfont{title in head/foot}
+%  {\small \insertshorttitle} %\raisebox{-1mm}{\includegraphics[height=5mm]{figs/MESOMICS_logo_notext.pdf}} \hspace{1mm} \includegraphics[height=3mm]{figs/MESOMICS_simple_white.pdf}
+%\end{beamercolorbox}
+%\begin{beamercolorbox}[wd=.32\paperwidth,ht=5mm,dp=0ex,center]{author in head/foot}
+%  \usebeamerfont{author in head/foot} 
+%  \vspace{-1mm}
+  %\includegraphics[height=6mm]{IARC-Logo.png} \hspace*{3mm} \includegraphics[height=6mm]{figs/CLB_logo2.jpg}
+%\end{beamercolorbox}%
+%\begin{beamerbox}[wd=.8\paperwidth,ht=5mm,dp=8ex,right]
+  \usebeamerfont{title in head/foot} 
+  \begin{flushright}
+  %\scriptsize{\insertframenumber / \inserttotalframenumber} \hspace*{2mm}
+  \end{flushright}
+%\end{beamercolorbox}
+}
+% \setmainfont[ % if issues with font, specify exact path to crimson text font
+%    Path           = /usr/share/texmf/fonts/opentype/public/crimson_text/,
+%    Extension      = .ttf,
+%    Ligatures      = TeX,
+%    BoldFont       = CrimsonText-Bold,
+%    ItalicFont     = CrimsonText-Italic,
+%    BoldItalicFont = CrimsonText-BoldItalic
+%]{CrimsonText}
+%\setmainfont[BoldFont = CrimsonText Bold,ItalicFont = CrimsonText Italic, BoldItalicFont = CrimsonText BoldItalic]{CrimsonText}
+%\setmainfont{DejaVu Sans}
+\newcommand*{\dosis}{\fontspec{dosis}}
+\newcommand*{\caveat}{\fontspec{caveat}}
+  %\setbeamerfont{title}{family=\fontspec{CrimsonText-Bold}}
+  
+    \setbeamerfont{author}{series=\bfseries\fontspec{Source Sans Pro},size=\small}
+    \setbeamerfont{date}{series=\fontspec{Source Sans Pro},size=\normalsize}
+    %\setbeamerfont{example text}{series=\bfseries\fontspec{CrimsonText-Roman}}
+    \setbeamerfont{frametitle}{series=\bfseries\fontspec{Source Sans Pro},size=\large}
+    %\setbeamerfont{framesubtitle}{series=\mdseries\fontspec{CrimsonText-Roman},size=\large}
+    \setbeamerfont{section}{series=\bfseries\fontspec{Source Sans Pro},size=\normalsize}
+    \setbeamerfont{subsection}{family=\fontspec{Source Sans Pro},series=\bfseries\fontspec{Source Sans Pro},size=\LARGE}
+    \setbeamerfont{section in head/foot}{series=\bfseries\fontspec{Source Sans Pro},size=\normalsize}
+    \setbeamerfont{subsection in head/foot}{family=\fontspec{Source Sans Pro},series=\bfseries\fontspec{Source Sans Pro},size=\LARGE}
+    \setbeamerfont{title}{series=\bfseries,family=\fontspec{Source Sans Pro},size=\Large}
+	\setbeamertemplate{itemize/enumerate body begin}{\normalsize}
+	\setbeamertemplate{itemize/enumerate subbody begin}{\small}
+
+    \setbeamertemplate{navigation symbols}{}
+
+    \mode<all>
+
+\setbeamertemplate{enumerate item}{%
+  \usebeamercolor[bg]{item projected}%
+  \raisebox{1.5pt}{\colorbox{bg}{\color{fg}\small\insertenumlabel}}%
+}
+
